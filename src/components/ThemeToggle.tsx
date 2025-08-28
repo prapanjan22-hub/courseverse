@@ -24,13 +24,13 @@ export default function ThemeToggle() {
     <button
       aria-label="Toggle dark mode"
       onClick={toggle}
-      className="inline-flex items-center justify-center h-9 w-9 rounded-lg border border-black/5 dark:border-white/10 hover:bg-foreground/5 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+      className="inline-flex items-center justify-center h-9 w-9 rounded-lg border border-border hover:bg-accent transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer group"
     >
       <div className="relative">
         {dark ? (
-          <Sun className="size-5 animate-float text-yellow-500" />
+          <Sun className="size-5 text-yellow-500 animate-float group-hover:animate-pulse transition-all duration-200" />
         ) : (
-          <Moon className="size-5 animate-float text-blue-500" />
+          <Moon className="size-5 text-blue-500 animate-float group-hover:animate-pulse transition-all duration-200" />
         )}
       </div>
     </button>

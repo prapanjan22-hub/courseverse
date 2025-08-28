@@ -5,13 +5,13 @@ export function CourseCard({ course }: { course: Course }) {
   return (
     <Link
       href={`/courses/${course.slug}`}
-      className="group rounded-xl border border-black/5 dark:border-white/10 p-5 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-white/5 transition-all duration-300 bg-white/60 dark:bg-white/5 hover-lift"
+      className="group rounded-xl border border-border p-5 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-white/5 transition-all duration-300 bg-card hover-lift"
     >
       <div className="flex items-start justify-between">
         <h3 className="text-lg font-semibold tracking-tight text-foreground group-hover:text-primary transition-colors">
           {course.title}
         </h3>
-        <span className="text-xs rounded-full px-2 py-1 bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary/80 animate-float-slow">
+        <span className="text-xs rounded-full px-2 py-1 bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary/80 animate-float-slow cursor-pointer hover:scale-110 hover:bg-primary/20 transition-all duration-200">
           {course.level}
         </span>
       </div>
@@ -19,11 +19,11 @@ export function CourseCard({ course }: { course: Course }) {
         {course.description}
       </p>
       <div className="mt-3 flex flex-wrap gap-2">
-        {course.tags.map((t) => (
+        {course.tags.map((t, index) => (
           <span 
             key={t} 
-            className="text-[11px] rounded-full bg-secondary px-2 py-0.5 text-secondary-foreground animate-float-slow"
-            style={{ animationDelay: `${Math.random() * 2}s` }}
+            className="text-[11px] rounded-full bg-secondary px-2 py-0.5 text-secondary-foreground animate-float-slow cursor-pointer hover:scale-110 hover:bg-primary/20 hover:text-primary transition-all duration-200"
+            style={{ animationDelay: `${index * 0.2}s` }}
           >
             {t}
           </span>

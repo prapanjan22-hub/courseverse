@@ -16,9 +16,9 @@ export default function Home() {
     <div className="px-4 sm:px-6 lg:px-8 py-12">
       <section className="mx-auto max-w-4xl text-center">
         <div className="flex justify-center space-x-4 mb-6">
-          <BookOpen className="size-8 text-primary animate-float" />
-          <Code className="size-8 text-primary animate-float-slow" />
-          <Zap className="size-8 text-primary animate-float-fast" />
+          <BookOpen className="size-8 text-primary animate-float cursor-pointer hover:scale-110 hover:text-primary/80 transition-all duration-300 hover:animate-pulse" />
+          <Code className="size-8 text-primary animate-float-slow cursor-pointer hover:scale-110 hover:text-primary/80 transition-all duration-300 hover:animate-pulse" />
+          <Zap className="size-8 text-primary animate-float-fast cursor-pointer hover:scale-110 hover:text-primary/80 transition-all duration-300 hover:animate-pulse" />
         </div>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground">
           Learn top programming languages

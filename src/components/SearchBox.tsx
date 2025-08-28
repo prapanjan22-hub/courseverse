@@ -37,7 +37,7 @@ export default function SearchBox({ onResults }: Props) {
           placeholder="Search courses, tags, levels..."
           className="w-full h-12 rounded-xl border border-border bg-card text-card-foreground px-4 pl-12 outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-all duration-300 placeholder:text-muted-foreground"
         />
-        <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 size-5 text-muted-foreground animate-float" />
+        <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 size-5 text-muted-foreground animate-float cursor-pointer hover:scale-110 hover:text-primary transition-all duration-300 hover:animate-pulse" />
       </div>
     </div>
   );
