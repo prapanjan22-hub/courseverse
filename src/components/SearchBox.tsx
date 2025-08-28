@@ -2,6 +2,7 @@
 import Fuse from "fuse.js";
 import { useMemo, useState } from "react";
 import { courses as allCourses, type Course } from "@/data/courses";
+import { Search } from "lucide-react";
 
 type Props = {
   onResults: (results: Course[]) => void;
@@ -29,12 +30,15 @@ export default function SearchBox({ onResults }: Props) {
 
   return (
     <div className="w-full max-w-3xl mx-auto relative">
-      <input
-        value={query}
-        onChange={(e) => handleChange(e.target.value)}
-        placeholder="Search courses, tags, levels..."
-        className="w-full h-12 rounded-xl border border-black/5 dark:border-white/10 bg-white/60 dark:bg-white/5 px-4 outline-none focus:ring-2 focus:ring-foreground/20"
-      />
+      <div className="relative">
+        <input
+          value={query}
+          onChange={(e) => handleChange(e.target.value)}
+          placeholder="Search courses, tags, levels..."
+          className="w-full h-12 rounded-xl border border-border bg-card text-card-foreground px-4 pl-12 outline-none focus:ring-2 focus:ring-ring focus:border-ring transition-all duration-300 placeholder:text-muted-foreground"
+        />
+        <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 size-5 text-muted-foreground animate-float" />
+      </div>
     </div>
   );
 }
